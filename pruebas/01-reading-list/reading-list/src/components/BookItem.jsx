@@ -9,7 +9,7 @@ export const BookItem = ({book, addToReadingList,removeFromReadingList}) => {
     <p>Autor: {book.author.name}</p>
     <p>Genero: {book.genre}</p>
     {addToReadingList && (<button onClick={()=> addToReadingList(book)}>Add to Read List</button>)}
-    {removeFromReadingList ? (<button onClick={()=> removeFromReadingList(book)}>Remove from Reading list</button>):null}
+    {removeFromReadingList && (<button onClick={()=> removeFromReadingList(book)}>Remove from Reading list</button>)}
     
     </>
   )

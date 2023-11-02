@@ -6,14 +6,14 @@ import { BookItem } from "./BookItem"
 
 
 
-export const ReadingList = ({readingList}) => {
+export const ReadingList = ({readingList,removeFromReadingList}) => {
   return (
     <>
-    <h1>Reading List</h1>
+
     <ul className='booksList'>
       {readingList.map((book,index)=>(
         <li key={index}>
-          <BookItem book={book}/>
+          <BookItem book={book} removeFromReadingList={() => removeFromReadingList(book)}/>
         </li>
       ))}
     </ul>
